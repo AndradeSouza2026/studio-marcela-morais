@@ -1,0 +1,130 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Service {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  duration    String?
+  price       String?
+  image       String?
+  isActive    Boolean  @default(true)
+  order       Int      @default(0)
+  category    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Course {
+  id               String   @id @default(cuid())
+  name             String
+  slug             String   @unique
+  description      String?
+  presentation     String?
+  forWho           String?
+  duration         String?
+  modality         String?
+  investment       String?
+  nextClass        String?
+  vacancies        String?
+  hasCertificate   Boolean  @default(true)
+  image            String?
+  isActive         Boolean  @default(true)
+  isHighlighted    Boolean  @default(false)
+  faq              String?
+  modules          CourseModule[]
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
+
+model CourseModule {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  courseId    String
+  course      Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  order       Int      @default(0)
+}
+
+model Gallery {
+  id          String   @id @default(cuid())
+  url         String
+  caption     String?
+  category    String? // "Unhas", "Nail Design", "Cursos", "Alunas", "Resultados", "Studio"
+  isFeatured  Boolean  @default(false)
+  isActive    Boolean  @default(true)
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+}
+
+model Testimonial {
+  id          String   @id @default(cuid())
+  name        String
+  photo       String?
+  text        String
+  rating      Int      @default(5)
+  category    String? // "Cliente" or "Aluna"
+  isFeatured  Boolean  @default(false)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+}
+
+model Lead {
+  id          String   @id @default(cuid())
+  name        String
+  phone       String
+  whatsapp    String?
+  interest    String?  // e.g., "Curso", "Serviço"
+  course      String?
+  service     String?
+  origin      String?
+  observation String?
+  status      String   @default("Novo") // Novo, Em contato, Interessado, Agendado, Matriculado, Finalizado
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Appointment {
+  id           String   @id @default(cuid())
+  clientName   String
+  phone        String
+  service      String
+  professional String?
+  date         String
+  time         String
+  status       String   @default("Solicitado") // Solicitado, Confirmado, Concluído, Cancelado
+  observation  String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Settings {
+  id           String   @id @default("1")
+  name         String   @default("Studio Marcela Morais")
+  phone        String?
+  whatsapp     String?
+  instagram    String?
+  address      String?
+  googleMapsUrl String?
+  businessHours String?
+  seoTitle     String?
+  seoDesc      String?
+  whatsappMsg  String?
+  updatedAt    DateTime @updatedAt
+}
+
