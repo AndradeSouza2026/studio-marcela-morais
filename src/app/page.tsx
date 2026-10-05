@@ -20,7 +20,7 @@ export default function Home() {
         {/* Background Image with overlay */}
         <div className="absolute inset-0 z-0">
           <Image 
-            src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=2069&auto=format&fit=crop" 
+            src="/images/hero.jpg" 
             alt="Unhas elegantes" 
             fill 
             className="object-cover object-center"
@@ -63,7 +63,7 @@ export default function Home() {
            <div className="w-full md:w-1/2">
              <div className="relative aspect-[4/5] w-full max-w-md mx-auto">
                <Image 
-                 src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1974&auto=format&fit=crop"
+                 src="/images/hero.jpg"
                  alt="Marcela Morais Studio"
                  fill
                  className="object-cover rounded-tl-[100px] rounded-br-[100px] shadow-soft"
@@ -106,7 +106,7 @@ export default function Home() {
             {/* Service Card 1 */}
             <div className="bg-white border border-secondary rounded-2xl overflow-hidden shadow-sm hover:shadow-soft transition-all group">
               <div className="relative h-64 overflow-hidden">
-                <Image src="https://images.unsplash.com/photo-1519014816548-bf5fe059e98b?q=80&w=2069&auto=format&fit=crop" alt="Alongamento em Gel" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/images/fibra_de_vidro.jpg" alt="Alongamento em Gel" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-8 text-center">
                 <h3 className="font-serif text-xl text-accent mb-3">Alongamento em Fibra de Vidro</h3>
@@ -120,7 +120,7 @@ export default function Home() {
             {/* Service Card 2 */}
             <div className="bg-white border border-secondary rounded-2xl overflow-hidden shadow-sm hover:shadow-soft transition-all group">
               <div className="relative h-64 overflow-hidden">
-                <Image src="https://images.unsplash.com/photo-1620336214041-3837976e8ea3?q=80&w=1964&auto=format&fit=crop" alt="Banho de Gel" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/images/banho_de_gel.jpg" alt="Banho de Gel" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-8 text-center">
                 <h3 className="font-serif text-xl text-accent mb-3">Banho de Gel</h3>
@@ -134,7 +134,7 @@ export default function Home() {
             {/* Service Card 3 */}
             <div className="bg-white border border-secondary rounded-2xl overflow-hidden shadow-sm hover:shadow-soft transition-all group">
               <div className="relative h-64 overflow-hidden">
-                <Image src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=2070&auto=format&fit=crop" alt="Spa dos Pés" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/images/spa_dos_pes.jpg" alt="Spa dos Pés" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-8 text-center">
                 <h3 className="font-serif text-xl text-accent mb-3">Spa dos Pés & Pedicure</h3>
@@ -174,7 +174,7 @@ export default function Home() {
               <div className="absolute top-0 left-0 w-1 h-full bg-primary transform origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-500"></div>
               <div className="flex gap-4 items-center mb-4">
                 <div className="w-16 h-16 rounded-lg overflow-hidden relative shrink-0">
-                  <Image src="https://images.unsplash.com/photo-1516975080661-460f38b4d8d1?q=80&w=2070&auto=format&fit=crop" alt="Curso Iniciante" fill className="object-cover" />
+                  <Image src="/images/curso_iniciante.jpg" alt="Curso Iniciante" fill className="object-cover" />
                 </div>
                 <div>
                   <span className="text-xs text-primary font-bold uppercase tracking-wider">Para Iniciantes</span>
@@ -193,7 +193,7 @@ export default function Home() {
               <div className="absolute top-0 left-0 w-1 h-full bg-primary transform origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-500"></div>
               <div className="flex gap-4 items-center mb-4">
                 <div className="w-16 h-16 rounded-lg overflow-hidden relative shrink-0">
-                  <Image src="https://images.unsplash.com/photo-1620336214041-3837976e8ea3?q=80&w=1964&auto=format&fit=crop" alt="Curso Aperfeiçoamento" fill className="object-cover" />
+                  <Image src="/images/formatos_europeus.jpg" alt="Curso Aperfeiçoamento" fill className="object-cover" />
                 </div>
                 <div>
                   <span className="text-xs text-primary font-bold uppercase tracking-wider">Aperfeiçoamento</span>

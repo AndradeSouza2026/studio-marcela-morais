@@ -26,7 +26,7 @@ export default async function CursosPage() {
               <div key={curso.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-soft transition-all flex flex-col group">
                 <div className="relative h-56 overflow-hidden">
                   <Image 
-                    src={curso.image || "https://images.unsplash.com/photo-1516975080661-460f38b4d8d1?q=80&w=2070&auto=format&fit=crop"} 
+                    src={curso.image || "/images/curso_iniciante.jpg"} 
                     alt={curso.name} 
                     fill 
                     className="object-cover group-hover:scale-105 transition-transform duration-700" 
